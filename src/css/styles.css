@@ -1,3 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+:root {
+    --primary-color: #0a100d;
+    --accent-color: #902923;
+    --additional-color: #a22c29;
+    --light-color: #f3eada;
+
+    --header-font: "Playfair Display";
+    --text-font: "Roboto";
+}
+
 body {
-    background-color: aliceblue;
+    background-color: var(--accent-color);
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.page-header {
+    background-color: var(--primary-color);
+    padding: 1.5rem 2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btn {
+    font-family: var(--header-font);
+    font-size: clamp(1.2rem, 5vw, 1.6rem);
+    color: var(--light-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: text-decoration-color 0.5s ease, text-underline-offset 0.5s ease;
+}
+
+.nav-btn:hover,
+.footer-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 6px;
+}
+
+.restaurant-name {
+    font-family: var(--restaurant-name-font);
+    color: var(--light-color);
+}
+
+.page-content {
+    flex: 1;
+}
+
+.page-footer {
+    background-color: var(--primary-color);
+    padding: 0.5rem 1rem;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-footer,
+.footer-link {
+    font-family: var(--header-font);
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: var(--light-color);
+    transition: text-decoration-color 0.3s ease, text-underline-offset 0.3s ease;
 }
