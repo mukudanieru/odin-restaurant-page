@@ -58,13 +58,97 @@ body {
     text-underline-offset: 6px;
 }
 
-.restaurant-name {
-    font-family: var(--restaurant-name-font);
-    color: var(--light-color);
-}
-
 .page-content {
     flex: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* THE GRID CONTENT */
+.content {
+    margin: 2rem;
+    max-width: 50%;
+    border-radius: 0.5rem;
+    background-color: rgba(10, 16, 13, 0.5);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 1440px) {
+    .content {
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 768px) {
+    .content {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+}
+
+/* LEFT SIDE OF THE GRID */
+.content-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-logo {
+    /* max-height: 400px; */
+    height: clamp(250px, 50vw, 400px);
+}
+
+/* RIGHT SIDE OF THE GRID */
+.content-information {
+    padding: 2rem 3rem;
+
+    display: grid;
+    gap: 2rem;
+}
+
+.description {
+    color: var(--light-color);
+    font-family: var(--header-font);
+    font-size: 1.4rem;
+    text-align: justify;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.services-title {
+    color: var(--light-color);
+    font-family: var(--header-font);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.service-list {
+    list-style: disc;
+    padding-left: 1.5rem;
+}
+
+.service-list li {
+    color: var(--light-color);
+    font-family: var(--header-font);
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.2s ease;
+    cursor: default;
+}
+
+.service-list li:hover {
+    color: var(--accent-color);
+
+    /* AI Generated HEHE */
+    transform: translateX(5px);
 }
 
 .page-footer {
