@@ -66,6 +66,7 @@ body {
     align-items: center;
 }
 
+/* HOME */
 /* THE GRID CONTENT */
 .content {
     margin: 2rem;
@@ -123,7 +124,8 @@ body {
     gap: 1rem;
 }
 
-.services-title {
+.services-title,
+.contact-title {
     color: var(--light-color);
     font-family: var(--header-font);
     font-size: 1.5rem;
@@ -149,6 +151,38 @@ body {
 
     /* AI Generated HEHE */
     transform: translateX(5px);
+}
+
+/* MENU */
+/* CONTACT */
+.content.contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact {
+    padding: 1rem 2.5rem;
+    gap: 1.6rem;
+}
+
+.facebook {
+    border: 2px solid var(--light-color);
+    border-radius: 0.4rem;
+}
+
+.contact-icon,
+.links {
+    color: var(--light-color);
+    width: 34px;
+    height: 34px;
+}
+
+.contact-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .page-footer {

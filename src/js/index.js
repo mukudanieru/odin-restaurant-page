@@ -2,11 +2,7 @@ import "../css/styles.css";
 import brothersLogo from "../asssets/logo.png";
 import { createNode, render } from "./documentHelper";
 
-function Home() {
-    const content = createNode("div", { class: "content", id: "content" }, []);
-
-    console.log(brothersLogo);
-
+function Home(content) {
     // First part of the component
     const contentImage = createNode("div", { class: "content-image" }, [
         createNode("img", { id: "image", class: "content-logo" }, [
@@ -46,4 +42,5 @@ function Home() {
     render(document.querySelector("#page-content"), content);
 }
 
-const home = Home();
+const content = createNode("div", { class: "content", id: "content" }, []);
+// const home = Home(content);

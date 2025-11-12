@@ -12,6 +12,7 @@ function createNode(tag, attributes = {}, contents = []) {
         }
     }
 
+    // Set content for image and lists
     if (tag === "img") {
         element.src = contents[0];
 
