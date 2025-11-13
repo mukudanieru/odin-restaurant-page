@@ -25,6 +25,10 @@ function createNode(tag, attributes = {}, contents = []) {
         });
 
         return element;
+    } else if (tag === "a") {
+        element.innerHTML = contents[0];
+
+        return element;
     }
 
     // Set content
