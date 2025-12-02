@@ -3,6 +3,7 @@ import { createNode, render } from "./documentHelper";
 export default function Contact(content) {
     content.classList.add("contact");
 
+    // Header part of the component
     const contactTitle = createNode("div", { class: "contact-title" }, [
         "Contact",
     ]);
@@ -47,6 +48,7 @@ export default function Contact(content) {
         </svg>
     `;
 
+    // The actual content part of the component
     const contactList = createNode("div", { class: "contact-list" }, [
         createNode(
             "a",

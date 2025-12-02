@@ -44,4 +44,5 @@ function Home(content) {
 }
 
 const content = createNode("div", { class: "content", id: "content" }, []);
-const contact = Contact(content);
+// const home = Home(content);
+// const contact = Contact(content);
