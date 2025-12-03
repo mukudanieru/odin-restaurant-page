@@ -1,6 +1,8 @@
 import { createNode, render } from "./documentHelper";
 
-export default function Menu(content) {
+export default function Menu(main) {
+    const content = createNode("div", { class: "content", id: "content" }, []);
+
     content.classList.add("prices-content");
 
     const menuTitle = createNode("div", { class: "menu-title" }, ["Menu"]);
@@ -40,5 +42,5 @@ export default function Menu(content) {
     content.appendChild(prices);
     content.appendChild(flavors);
 
-    render(document.querySelector("#page-content"), content);
+    render(main, content);
 }

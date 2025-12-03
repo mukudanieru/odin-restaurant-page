@@ -4,7 +4,9 @@ import Menu from "./menu";
 import brothersLogo from "../asssets/logo.png";
 import { createNode, render } from "./documentHelper";
 
-function Home(content) {
+function Home(main) {
+    const content = createNode("div", { class: "content", id: "content" }, []);
+
     // First part of the component
     const contentImage = createNode("div", { class: "content-image" }, [
         createNode("img", { id: "image", class: "content-logo" }, [
@@ -41,10 +43,36 @@ function Home(content) {
     content.appendChild(contentImage);
     content.appendChild(contentInformation);
 
-    render(document.querySelector("#page-content"), content);
+    render(main, content);
 }
 
-const content = createNode("div", { class: "content", id: "content" }, []);
 // const home = Home(content);
-const menu = Menu(content);
+// const menu = Menu(content);
 // const contact = Contact(content);
+
+function DOMController() {
+    const navHeader = document.querySelector("#header");
+
+    const mainContent = document.querySelector("#page-content");
+    let currentPage = Home(mainContent);
+
+    function renderPageContent() {
+        navHeader.addEventListener("click", (event) => {
+            if (!event.target.classList.contains("nav-btn")) return;
+
+            console.log(event.target.id);
+
+            if (event.target.id === "home") {
+                currentPage = Home(mainContent);
+            } else if (event.target.id === "menu") {
+                currentPage = Menu(mainContent);
+            } else if (event.target.id === "contact") {
+                currentPage = Contact(mainContent);
+            }
+        });
+    }
+
+    renderPageContent();
+}
+
+const dom = DOMController();

@@ -1,6 +1,8 @@
 import { createNode, render } from "./documentHelper";
 
-export default function Contact(content) {
+export default function Contact(main) {
+    const content = createNode("div", { class: "content", id: "content" }, []);
+
     content.classList.add("contact");
 
     // Header part of the component
@@ -75,5 +77,5 @@ export default function Contact(content) {
     content.appendChild(contactTitle);
     content.appendChild(contactList);
 
-    render(document.querySelector("#page-content"), content);
+    render(main, content);
 }
