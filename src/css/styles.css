@@ -125,7 +125,8 @@ body {
 }
 
 .services-title,
-.contact-title {
+.contact-title,
+.menu-title {
     color: var(--light-color);
     font-family: var(--header-font);
     font-size: 1.5rem;
@@ -163,11 +164,8 @@ body {
     gap: 1.8rem;
 }
 
-.title {
-    color: var(--light-color);
-    font-size: 2rem;
+.menu-title {
     text-align: center;
-    font-weight: bold;
 }
 
 .prices {

@@ -1,5 +1,6 @@
 import "../css/styles.css";
 import Contact from "./contact";
+import Menu from "./menu";
 import brothersLogo from "../asssets/logo.png";
 import { createNode, render } from "./documentHelper";
 
@@ -45,4 +46,5 @@ function Home(content) {
 
 const content = createNode("div", { class: "content", id: "content" }, []);
 // const home = Home(content);
+const menu = Menu(content);
 // const contact = Contact(content);
